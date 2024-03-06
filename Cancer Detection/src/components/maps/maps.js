@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import ReactMapGL, { Marker, GeolocateControl } from 'react-map-gl';
 import Navbar from '../navbar/navbar'
@@ -13,7 +13,7 @@ function Maps() {
         latitude: 17.4065,
         longitude: 78.4772,
         zoom: 15
-    })
+    })        
     const [Hospitals, setHospitals] = useState([])
     const ongeolocation = (e) => {
         setLocation([e.coords.latitude, e.coords.longitude])
@@ -34,7 +34,7 @@ function Maps() {
         const overpassUrl = "http://overpass-api.de/api/interpreter";
         const overpassQuery = `
         [out:json];
-        node(around:1000,${coords[0]},${coords[1]})["amenity"="hospital"];
+        node(around:3000,${coords[0]},${coords[1]})["amenity"="hospital"];
         out;
         `;
         await axios.get(overpassUrl, { params: { data: overpassQuery } })

@@ -1,13 +1,6 @@
 import React from 'react'
 import Navbar from '../navbar/navbar'
-import c1 from '../../Assests/c1.jpeg'
-import c2 from '../../Assests/c2.png'
-import c3 from '../../Assests/c3.png'
-import c4 from '../../Assests/c4.jpg'
-import c5 from '../../Assests/c5.jpg'
-import c6 from '../../Assests/c6.jpg'
-import c7 from '../../Assests/c7.jpg'
-import bloodimg from '../../Assests/bloodimg.jpg'
+import Carousel from './Carousel'
 import { useNavigate } from 'react-router-dom'
 import './Home.css'
 function Home() {
@@ -16,7 +9,7 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <img className='w-100' height="280px" style={{ marginTop: "60px" }} src={bloodimg} alt="" />
+      <Carousel />
       <div className='d-block mx-auto w-75 mt-5'>
         <div className='d-flex justify-content-between'>
           <h2 style={{ color: "#03045e", fontWeight: "bold" }} className='mb-4'>Blood Cancers</h2>
@@ -30,39 +23,24 @@ function Home() {
           <li><p><span className='text-danger'>Myeloma</span> is a cancer of the plasma cells. Plasma cells are white blood cells that produce disease- and infection-fighting antibodies in your body. Myeloma cells prevent the normal production of antibodies, leaving your body's immune system weakened and susceptible to infection. </p></li>
         </ul>
       </div>
-      <div className='imagecarousel mb-5'>
-        <div id="carouselExampleRide" className="carousel carousel-dark slide" data-bs-ride="true">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src={c1} className="d-block w-100 cimage" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={c2} className="d-block w-100 cimage" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={c3} className="d-block w-100 cimage" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={c4} className="d-block w-100 cimage" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={c5} className="d-block w-100 cimage" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={c6} className="d-block w-100 cimage" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={c7} className="d-block w-100 cimage" alt="..." />
-            </div>
+      <div className='d-block mx-auto mt-5 mb-5' width="80%">
+        <div className="d-flex flex-wrap gap-5 justify-content-center">
+          <div className="card cardstyling" style={{ borderLeft: "5px solid  #0dcaf0" }}>
+            <h5>Users</h5>
+            <p style={{ fontSize: "25px", fontWeight: "bold" }}>10</p>
           </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
+          <div className="card cardstyling" style={{ borderLeft: "5px solid  #fd3550" }}>
+            <h5>Deaths</h5>
+            <p style={{ fontSize: "25px", fontWeight: "bold" }}>219</p>
+          </div>
+          <div className="card cardstyling" style={{ borderLeft: "5px solid  #15ca20" }}>
+            <h5>Patients</h5>
+            <p style={{ fontSize: "25px", fontWeight: "bold" }}>4594</p>
+          </div>
+          <div className="card cardstyling" style={{ borderLeft: "5px solid  #ffc107" }}>
+            <h5>Cured</h5>
+            <p style={{ fontSize: "25px", fontWeight: "bold" }}>137</p>
+          </div>
         </div>
       </div>
     </div>

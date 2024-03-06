@@ -16,7 +16,8 @@
     font-weight: bold;
 }
 .navbar {
-    background-color: #557A95;
+    /* background-color: #557A95; */
+    background-color: #397ca5;
     position: fixed;
     top: 0;
     z-index: 999;
