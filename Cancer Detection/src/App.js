@@ -17,8 +17,7 @@ function App() {
         <Route path='/maps' element={<Protected><Maps /></Protected>}/>
         <Route path='/home' element={<Protected><Home /></Protected>}/>
         <Route path='/detection' element={<Protected><Detection /></Protected>}/>        
-      </Routes>
-      <div></div>
+      </Routes>      
       <ToastContainer/>
     </div>
   )
