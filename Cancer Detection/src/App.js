@@ -18,6 +18,7 @@ function App() {
         <Route path='/home' element={<Protected><Home /></Protected>}/>
         <Route path='/detection' element={<Protected><Detection /></Protected>}/>        
       </Routes>
+      <div></div>
       <ToastContainer/>
     </div>
   )
